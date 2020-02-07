@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VuexPersistence from 'vuex-persist'
 import mutations from './mutations'
-import actions from '/actions'
+import actions from './actions.js'
 
 Vue.use(Vuex)
 
@@ -30,6 +30,6 @@ export default new Vuex.Store({
   getters: {
     hasError: state => state.error ? true : false
   },
-  plugins:[vuecLocal, plugin],
+  plugins:[vuexLocal.plugin],
   strict: debug
 })
